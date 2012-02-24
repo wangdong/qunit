@@ -1,0 +1,4 @@
+env = Environment()
+env.Program('#bin/test', ['test.cpp'],
+	CPPPATH=['../include'],
+        CCFLAGS=['-D_DEBUG'])

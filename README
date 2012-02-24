@@ -1,0 +1,37 @@
+QUnit
+---------------------
+
+Brief Description :
+
+A lightweight and rich functional unit test framework for C++. No DLL/so, no Lib, just include and GO. cross platform support: Win32, GNU/Linux.
+
+How to Use :
+
+Include qunit.h and GO!
+
+Example :
+
+#include <qunit.h>
+
+void main(int argc, char** argv)
+{
+	QUnit::QCUIRunner runner(argc, argv);
+}
+
+class TestSomething
+{
+public:
+	TestSomething()
+	{
+		// do some init job.
+	}
+	~TestSomething()
+	{
+		// do some cleaning job.
+	}
+};
+
+qtest(test_first, TestSomething)
+{
+	qassert(0);
+}
